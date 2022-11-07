@@ -31,3 +31,32 @@
   height: 22px !important;
   background-color: #cd9042;
 }
+.header_option_line_one {
+  font-size: 10px;
+}
+.header_option_line_two {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.header_option_basket {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.header_basket_count {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.header_nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+.header_option {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+}
