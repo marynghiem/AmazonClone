@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 const Header = () => {
   const [{ basket, user }, dispatch] = useStateValue();
-  console.log(basket);
   return (
     <div className="header">
       <Link to="/">
