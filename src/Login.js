@@ -9,7 +9,12 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const signIn = (e) => {
     e.preventDefault();
-    //some fancy firebase
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((auth) => {
+        navigate("/");
+      })
+      .catch((error) => alert(error.message));
   };
   const register = (e) => {
     e.preventDefault();
@@ -23,7 +28,6 @@ const Login = () => {
         }
       })
       .catch((error) => alert(error.message));
-    //some fancy firebase stuff
   };
 
   return (
