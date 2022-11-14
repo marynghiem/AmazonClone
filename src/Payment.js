@@ -1,4 +1,5 @@
 import React from "react";
+import CheckoutProduct from "./CheckoutProduct";
 import "./Payment.css";
 import { useStateValue } from "./StateProvider";
 
@@ -14,10 +15,25 @@ const Payment = () => {
           </div>
           <div className="payment_address">
             <p>{user?.email}</p>
+            <p>123 React Lane</p>
+            <p>Lose Angeles, CA</p>
           </div>
         </div>
         {/*Payment Section - review item*/}
-        <div className="payment_section"></div>
+        <div className="payment_section">
+          <h3>Review items and delivery</h3>
+        </div>
+        <div className="payment_items">
+          {basket.map((item) => (
+            <CheckoutProduct
+              id={item.id}
+              title={item.title}
+              image={item.image}
+              price={item.price}
+              rating={item.rating}
+            />
+          ))}
+        </div>
         {/*Payment Section - payment method */}
         <div className="payment_section"></div>
       </div>

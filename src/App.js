@@ -2,7 +2,7 @@ import "./App.css";
 import React, { useEffect } from "react";
 import Header from "./Header";
 import Home from "./Home";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Checkout from "./Checkout";
 import Login from "./Login";
 import { auth } from "./firebase";
