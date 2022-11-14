@@ -21,21 +21,29 @@ const Payment = () => {
         </div>
         {/*Payment Section - review item*/}
         <div className="payment_section">
-          <h3>Review items and delivery</h3>
+          <div className="payment_title">
+            <h3>Review items and delivery</h3>
+          </div>
+
+          <div className="payment_items">
+            {basket.map((item) => (
+              <CheckoutProduct
+                id={item.id}
+                title={item.title}
+                image={item.image}
+                price={item.price}
+                rating={item.rating}
+              />
+            ))}
+          </div>
         </div>
-        <div className="payment_items">
-          {basket.map((item) => (
-            <CheckoutProduct
-              id={item.id}
-              title={item.title}
-              image={item.image}
-              price={item.price}
-              rating={item.rating}
-            />
-          ))}
-        </div>
+
         {/*Payment Section - payment method */}
-        <div className="payment_section"></div>
+        <div className="payment_section">
+          <div className="payment_title">
+            <h3>Delivery Address</h3>
+          </div>
+        </div>
       </div>
     </div>
   );
