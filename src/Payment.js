@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import CheckoutProduct from "./CheckoutProduct";
 import "./Payment.css";
@@ -9,15 +9,34 @@ import { getBasketTotal } from "./reducer";
 
 const Payment = () => {
   const [{ basket, user }, dispatch] = useStateValue();
-  const [error, setError] = useState(null);
-  const [disabled, setDisabled] = useState(true);
-
   const stripe = useStripe();
   const elements = useElements();
 
   const [succeeded, setSucceeded] = useState(false);
   const [processing, setProcessing] = useState("");
-  const handleSubmit = (e) => {};
+  const [error, setError] = useState(null);
+  const [disabled, setDisabled] = useState(true);
+  const [clientSecret, setClientSecret] = useState(true);
+
+  useEffect(() => {
+    //generate the special stripe secret which allows us to charge a customer
+    const getClientSecret = async () => {
+      const response = await axios({
+        method: "post",
+        //stripe expects the total in currencies subunits
+        url: `/payments/create?total=${getBasketTotal(basket) * 100}`,
+      });
+      setClientSecret(response.data.clientSecret);
+    };
+    getClientSecret();
+  }, [basket]);
+
+  const handleSubmit = async (event) => {
+    //prevent it from refreshing
+    event.preventDefault();
+    setProcessing(true);
+    //const payload = await stripe
+  };
   const handleChange = (e) => {
     //Listen for changes in the CardElement
     //and display any errors as the customer types their card details
@@ -81,6 +100,7 @@ const Payment = () => {
                   <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
                 </button>
               </div>
+              {error && <div>{error}</div>}
             </form>
           </div>
         </div>
