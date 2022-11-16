@@ -6,6 +6,7 @@ import { useStateValue } from "./StateProvider";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
 import { getBasketTotal } from "./reducer";
+import axios from "axios";
 
 const Payment = () => {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -35,7 +36,18 @@ const Payment = () => {
     //prevent it from refreshing
     event.preventDefault();
     setProcessing(true);
-    //const payload = await stripe
+    const payload = await stripe
+      .confirmCardPayment(clientSecret, {
+        payment_method: {
+          card: elements.getElement(CardElement),
+        },
+      })
+      .then(({ paymentIntent }) => {
+        //paymentIntent = payment confirmation
+        setSucceeded(true);
+        setError(null);
+        setProcessing(false);
+      });
   };
   const handleChange = (e) => {
     //Listen for changes in the CardElement
