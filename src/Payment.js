@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CheckoutProduct from "./CheckoutProduct";
 import "./Payment.css";
 import { useStateValue } from "./StateProvider";
@@ -12,6 +12,7 @@ const Payment = () => {
   const [{ basket, user }, dispatch] = useStateValue();
   const stripe = useStripe();
   const elements = useElements();
+  const navigate = useNavigate();
 
   const [succeeded, setSucceeded] = useState(false);
   const [processing, setProcessing] = useState("");
@@ -47,6 +48,7 @@ const Payment = () => {
         setSucceeded(true);
         setError(null);
         setProcessing(false);
+        navigate("/orders", { replace: true });
       });
   };
   const handleChange = (e) => {
