@@ -44,11 +44,20 @@ function App() {
           path="/"
           element={
             <>
+              <Header />
+              <Home />
+            </>
+          }
+        />
+        <Route
+          path="/orders"
+          element={
+            <>
+              <Header />
               <Orders />
             </>
           }
         />
-        <Route path="/orders" />
         <Route
           path="/checkout"
           element={
