@@ -1291,3 +1291,27 @@ Issues? Report them at https://github.com/firebase/firebase-tools/issues and att
 [debug] [2022-11-24T00:16:32.884Z] [worker-us-central1-api-74087a8a-880d-4814-8e5a-aab6b2b13e2b]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-74087a8a-880d-4814-8e5a-aab6b2b13e2b]: IDLE"}}
 [debug] [2022-11-24T00:16:32.884Z] [work-queue] {"queueLength":0,"workRunningCount":1}
 [info] i  functions: Finished "api" in 587.384875ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 587.384875ms"}}
+[debug] [2022-11-24T00:58:45.771Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2022-11-24T00:58:45.803Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2022-11-24T00:58:45.808Z] Accepted request POST /clone-3ade4/us-central1/api/payments/create?total=23900 --> us-central1-api
+[debug] [2022-11-24T00:58:45.865Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-24T00:58:45.881Z] [functions] Got req.url=/clone-3ade4/us-central1/api/payments/create?total=23900, mapping to path=/payments/create?total=23900 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/clone-3ade4/us-central1/api/payments/create?total=23900, mapping to path=/payments/create?total=23900"}}
+[debug] [2022-11-24T00:58:45.891Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-11-24T00:58:45.897Z] [worker-us-central1-api-74087a8a-880d-4814-8e5a-aab6b2b13e2b]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-74087a8a-880d-4814-8e5a-aab6b2b13e2b]: BUSY"}}
+[debug] [2022-11-24T00:58:45.911Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2022-11-24T00:58:45.913Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2022-11-24T00:58:45.913Z] Accepted request POST /clone-3ade4/us-central1/api/payments/create?total=23900 --> us-central1-api
+[debug] [2022-11-24T00:58:45.921Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-24T00:58:45.921Z] [functions] Got req.url=/clone-3ade4/us-central1/api/payments/create?total=23900, mapping to path=/payments/create?total=23900 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/clone-3ade4/us-central1/api/payments/create?total=23900, mapping to path=/payments/create?total=23900"}}
+[debug] [2022-11-24T00:58:45.921Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-11-24T00:58:45.922Z] [worker-us-central1-api-d26e8246-d507-489b-b1fd-39f41fbd34bd]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-d26e8246-d507-489b-b1fd-39f41fbd34bd]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[info] >  Payment Request Recieved BOOM !!! for this amount >>> 23900 {"user":"Payment Request Recieved BOOM !!! for this amount >>> 23900","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Payment Request Recieved BOOM !!! for this amount >>> 23900"}}
+[info] >  Payment Request Recieved BOOM !!! for this amount >>> 23900 {"user":"Payment Request Recieved BOOM !!! for this amount >>> 23900","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Payment Request Recieved BOOM !!! for this amount >>> 23900"}}
+[debug] [2022-11-24T00:58:46.620Z] [worker-us-central1-api-d26e8246-d507-489b-b1fd-39f41fbd34bd]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-d26e8246-d507-489b-b1fd-39f41fbd34bd]: IDLE"}}
+[debug] [2022-11-24T00:58:46.620Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2022-11-24T00:58:46.621Z] [worker-us-central1-api-74087a8a-880d-4814-8e5a-aab6b2b13e2b]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-74087a8a-880d-4814-8e5a-aab6b2b13e2b]: IDLE"}}
+[debug] [2022-11-24T00:58:46.621Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[info] i  functions: Finished "api" in 541.872917ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 541.872917ms"}}
+[info] i  functions: Finished "api" in 551.37275ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 551.37275ms"}}
