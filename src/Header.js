@@ -29,10 +29,12 @@ const Header = () => {
             <span className="header_option_line_two">{user ? "Sign Out" : "Sign In"}</span>
           </div>
         </Link>
-        <div className="header_option">
-          <span className="header_option_line_one">Returns</span>
-          <span className="header_option_line_two">Orders</span>
-        </div>
+        <Link to="/orders">
+          <div className="header_option">
+            <span className="header_option_line_one">Returns</span>
+            <span className="header_option_line_two">Orders</span>
+          </div>
+        </Link>
         <div className="header_option">
           <span className="header_option_line_one">Your</span>
           <span className="header_option_line_two">Prime</span>
