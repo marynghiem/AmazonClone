@@ -4,7 +4,8 @@ import "./Order.css";
 const Order = ({ order }) => {
   return (
     <div className="order">
-      <h1></h1>
+      <h2>Order</h2>
+      <p></p>
     </div>
   );
 };
